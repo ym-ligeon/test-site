@@ -56,6 +56,20 @@
     font-size: 0.75rem;
     color: var(--muted);
   }
+  .counter {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .counter img {
+    height: 28px;
+  }
+  .counter-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
 </style>
 </head>
 <body>
@@ -64,6 +78,10 @@
     <p>Cette page est hébergée gratuitement sur GitHub Pages.<br>Si tu la vois dans ton navigateur, le déploiement a réussi.</p>
     <span class="badge">Test réussi</span>
     <div class="date">Publié le <span id="date"></span></div>
+    <div class="counter">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=yvesmarieligeon.test-site" alt="compteur de visites" />
+      <span class="counter-label">nombre de visites de la page</span>
+    </div>
   </div>
   <script>
     document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR');
