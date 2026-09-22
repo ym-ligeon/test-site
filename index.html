@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon premier site GitHub Pages</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #38bdf8;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    color: var(--accent);
+  }
+  p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 6px 14px;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+  .date {
+    margin-top: 24px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Ça marche ! 🎉</h1>
+    <p>Cette page est hébergée gratuitement sur GitHub Pages.<br>Si tu la vois dans ton navigateur, le déploiement a réussi.</p>
+    <span class="badge">Test réussi</span>
+    <div class="date">Publié le <span id="date"></span></div>
+  </div>
+  <script>
+    document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR');
+  </script>
+</body>
+</html>
