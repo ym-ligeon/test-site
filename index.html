@@ -56,6 +56,45 @@
     font-size: 0.75rem;
     color: var(--muted);
   }
+  .counter {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .counter img {
+    height: 28px;
+  }
+  .counter-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+  .link-box {
+    display: block;
+    margin-top: 24px;
+    padding: 16px 18px;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid var(--line, var(--muted));
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .link-box:hover {
+    background: rgba(56, 189, 248, 0.16);
+    border-color: var(--accent);
+  }
+  .link-box .lb-title {
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .link-box .lb-sub {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
 </style>
 </head>
 <body>
@@ -65,15 +104,17 @@
     <p>TestV02</p>
     <span class="badge">Test réussi</span>
     <div class="date">Publié le <span id="date"></span></div>
+    <div class="counter">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=yvesmarieligeon.test-site" alt="compteur de visites" />
+      <span class="counter-label">nombre de visites de la page</span>
+    </div>
+    <a class="link-box" href="page2.html">
+      <span class="lb-title">→ Page 2</span>
+      <span class="lb-sub">Clique ici pour aller sur la deuxième page de test</span>
+    </a>
   </div>
   <script>
     document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR');
   </script>
-
-  <!-- GoatCounter : comptage privé, invisible sur la page. Remplace MYCODE par le code de ton site
-       (choisi lors de l'inscription sur goatcounter.com). Les statistiques ne sont consultables
-       que par toi, une fois connecté sur ton tableau de bord GoatCounter. -->
-  <script data-goatcounter="https://MYCODE.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
